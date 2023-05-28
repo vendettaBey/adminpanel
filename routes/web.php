@@ -35,4 +35,29 @@ Route::get('logout', function () {
     return Redirect::to('/');
 })->name('logout');
 
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/kategoriEkle', [PanelController::class, 'kategoriEkle'])->name('kategoriEkle');
+    Route::any('/kategoriKaydet', [PanelController::class, 'kategoriKaydet'])->name('kategoriKaydet');
+
+
+    Route::get('/kategoriDuzenle/{categoryId}', [PanelController::class, 'kategoriDuzenle'])->name('kategoriDuzenle');
+    Route::post('/kategoriUpdate', [PanelController::class, 'kategoriUpdate'])->name('kategoriUpdate');
+    Route::any('/kategoriSil', [PanelController::class, 'kategoriSil'])->name('kategoriSil');
+
+
+    //! Ürünler
+
+    Route::get('/urunEkle', [PanelController::class, 'urunEkle'])->name('urunEkle');
+    Route::post('/urunKaydet', [PanelController::class, 'urunKaydet'])->name('urunKaydet');
+
+    Route::get('/urunler', [PanelController::class, 'urunler'])->name('urunler');
+
+    Route::get('/urunDuzenle/{urunId}', [PanelController::class, 'urunDuzenle'])->name('urunDuzenle');
+    Route::get('/urunSil/{urunId}', [PanelController::class, 'urunSil'])->name('urunSil');
+    Route::post('/blogDuzenleKaydet', [PanelController::class, 'blogDuzenleKaydet'])->name('blogDuzenleKaydet');
+
+
+});
 require __DIR__ . '/auth.php';

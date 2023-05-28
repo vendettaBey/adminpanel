@@ -23,6 +23,8 @@
     <!-- You can add your own stylesheet here to override any styles that comes before it
   <link rel="stylesheet" media="screen, print" href="css/your_styles.css">-->
 
+
+  
     <style>
         i {
             color: #fff !important;
@@ -152,7 +154,7 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#" class="text-white font-bold"
+                                        <a href="{{ route('kategoriEkle') }}" class="text-white font-bold"
                                             title="Kategori Ekle" data-filter-tags="utilities menu child">
                                             <span class="nav-link-text" data-i18n="nav.utilities_menu_child">
                                                 Kategori Ekle
@@ -176,15 +178,15 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="#" class="text-white font-bold"
-                                            title="Kategori Ekle" data-filter-tags="utilities menu child">
+                                        <a href="{{ route('urunEkle') }}" class="text-white font-bold"
+                                            title="Ürün Ekle" data-filter-tags="utilities menu child">
                                             <span class="nav-link-text" data-i18n="nav.utilities_menu_child">
                                                 Ürün Ekle
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-white font-bold"
+                                        <a href="{{ route('urunler') }}" class="text-white font-bold"
                                             title="Kategori Ekle" data-filter-tags="utilities menu child">
                                             <span class="nav-link-text" data-i18n="nav.utilities_menu_child">
                                                 Ürün Listesi

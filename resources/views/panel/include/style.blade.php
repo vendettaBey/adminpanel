@@ -31,3 +31,12 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('adminassets/img/favicon/apple-touch-icon.png') }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('adminassets/img/favicon/favicon-32x32.png') }}">
 <link rel="mask-icon" href="{{ asset('adminassets/img/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
+
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+<!-- Select2 -->
+
+
