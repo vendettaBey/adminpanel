@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PanelController;
 use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\SiparislerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/urunDuzenle/{urunId}', [PanelController::class, 'urunDuzenle'])->name('urunDuzenle');
     Route::get('/urunSil/{urunId}', [PanelController::class, 'urunSil'])->name('urunSil');
     Route::post('/blogDuzenleKaydet', [PanelController::class, 'blogDuzenleKaydet'])->name('blogDuzenleKaydet');
+
+
+    //! Siparişler
+
+    Route::get('/siparisler', [SiparislerController::class, 'index'])->name('siparisler');
+    Route::get('/yeniSiparis', [SiparislerController::class, 'yeniSiparis'])->name('yeniSiparis');
+    Route::get('/siparisEkranTemizle', [SiparislerController::class, 'siparisEkranTemizle'])->name('siparisEkranTemizle');
+    Route::any('/ekranaYeniSiparis', [SiparislerController::class, 'ekranaYeniSiparis'])->name('ekranaYeniSiparis');
+    Route::any('/siparisFinalKaydet', [SiparislerController::class, 'siparisFinalKaydet'])->name('siparisFinalKaydet');
 
 
 });

@@ -138,11 +138,23 @@
                         
                         
                             <li>
-                                <a href="#" class="text-white font-bold"
-                                    title="Alan Adlarım">
-                                    <i class="fal fa-globe"></i>
-                                    <span class="nav-link-text" data-i18n="nav.blankpage">Alan Adlarım</span>
+                                <a href="#" class="text-white font-bold" title="Category"
+                                    data-filter-tags="category">
+                                    <i class="fal fa-file"></i>
+                                    <span class="nav-link-text" data-i18n="nav.category">Siparişler</span>
                                 </a>
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('siparisler') }}" class="text-white font-bold"
+                                            title="Bloglar" data-filter-tags="utilities menu child">
+                                            <span class="nav-link-text" data-i18n="nav.utilities_menu_child">Liste</span>
+                                        </a>
+                                        <a href="{{ route('yeniSiparis') }}"class="text-white font-bold"
+                                            title="Blog Ekle" data-filter-tags="utilities menu child">
+                                            <span class="nav-link-text" data-i18n="nav.utilities_menu_child">Sipariş Ekle</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         
                         
